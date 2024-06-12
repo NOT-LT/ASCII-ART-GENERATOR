@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Ascii art web</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="heading">
+        <h1>Ascii Art Generator</h1>
+      </div>
+
+      <div>
+        <form method="POST" action="/ascii-art">
+          <div class="input-container">
+            <textarea class="input" name="input" placeholder="Enter some text.."></textarea>
+          </div>
+          <br>
+          <ul class="banner">
+            <div class="option">
+              <input type="radio" name="banner" value="standard" id="standard" checked>
+              <label for="standard">Standard</label>
+            </div>
+
+            <div class="option">
+              <input type="radio" name="banner" value="shadow" id="shadow">
+              <label for="shadow">Shadow</label>
+            </div>
+
+            <div class="option">
+              <input type="radio" name="banner" value="thinkertoy" id="thinkertoy">
+              <label for="thinkertoy">Thinkertoy</label>
+            </div>
+          </ul>
+          <br>
+
+          <div class="buttons">
+            <div class="convert-button">
+              <input class="button" type="submit" value="Convert">
+            </div>
+            <div class="download-button">
+              <button type="submit" class="button" formaction="/download" value="{{.}}"
+                name="downloadButton">Download</button>
+            </div>
+          </div>
+
+        </form>
+      </div>
+    </div>
+    <div class="output-container">
+      <textarea class="output" wrap="off" disabled>{{.}}</textarea>
+    </div>
+    <!-- <pre> <div class="output">{{.}}</div> </pre> -->
+    <!--pre is it not remove spaces or new lines-->
+
+  </body>
+
+</html>

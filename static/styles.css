@@ -1,0 +1,201 @@
+body {
+  background: #212534;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 0px 0px;
+}
+
+.heading {
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  padding: 0px 0px;
+  margin: 0px 0px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 10%;
+}
+
+.input-container {
+  background: #191c29;
+  width: 400px;
+  height: 300px;
+  padding-left: 1%;
+  position: relative;
+  border-radius: 6px;
+  color: rgba(27, 35, 39, 0);
+  margin-top: 18px;
+}
+
+.input {
+  width: 98%;
+  height: 98%;
+  background-color: #191c29;
+  font-family: Arial, Helvetica, sans-serif;
+  border: none;
+  color: white;
+  resize: none;
+  outline: none;
+  /* no boarder when clicked*/
+  font-size: 20px;
+  padding-top: 4px;
+}
+
+.banner {
+  color: white;
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+  gap: 15px;
+}
+
+.option {
+  display: inline;
+  align-items: center;
+  margin-right: 2%;
+}
+
+.option label {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.output-container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  height: 200px;
+  width: 440px;
+}
+
+.output {
+  padding: 30px 30px;
+  width: 100%;
+  height: 100%;
+  resize: none;
+  background-color: #212534;
+  border: none;
+  color: white;
+  text-align: center;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.convert-button input {
+  background-color: #3c67e3;
+  cursor: pointer;
+  border: none;
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  margin: 20px;
+  font-size: 20px;
+}
+
+.download-button button {
+  background-color: #3c67e3;
+  cursor: pointer;
+  border: none;
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  margin: 20px;
+  font-size: 20px;
+}
+
+
+@property --rotate {
+  syntax: "<angle>";
+  initial-value: 132deg;
+  inherits: false;
+}
+
+.input-container::before {
+  content: "";
+  width: 102%;
+  height: 102%;
+  border-radius: 8px;
+  background-image: linear-gradient(var(--rotate), #5ddcff, #3c67e3 43%, #4e00c2);
+  position: absolute;
+  z-index: -1;
+  top: -1%;
+  left: -1%;
+  animation: spin 2.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    --rotate: 0deg;
+  }
+
+  100% {
+    --rotate: 360deg;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .input-container {
+    width: 700px;
+    height: 350px;
+  }
+
+  .banner {
+    font-size: 30px;
+  }
+
+  .output-container {
+    width: 1260px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .output {
+    width: 90%;
+    height: 90%;
+    resize: none;
+    background-color: #212534;
+    border: none;
+    color: white;
+    text-align: center;
+    padding-top: 30px;
+  }
+
+  .convert-button input {
+    background-color: #3c67e3;
+    cursor: pointer;
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 20px;
+    font-size: 26px;
+  }
+
+  .download-button button {
+    background-color: #3c67e3;
+    cursor: pointer;
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 20px;
+    font-size: 26px;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .input-container {
+    width: 880px;
+    height: 450px;
+  }
+}
